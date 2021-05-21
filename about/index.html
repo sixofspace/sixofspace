@@ -9,7 +9,7 @@
 <meta name="description" content="暂无">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
-<meta property="og:url" content="https://github.com/sixofspace/about/index.html">
+<meta property="og:url" content="https://github.com/about/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="暂无">
 <meta property="og:locale" content="en_US">
@@ -22,8 +22,6 @@
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/sixofspace/css/style.css?v=1.1.0" rel="stylesheet">
-
-<link href="/sixofspace/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -49,7 +47,7 @@
   <input class="theme_preload_comment" value="">
   <input class="theme_blog_path" value="/sixofspace">
   <input id="theme_shortcut" value="true" />
-  <input id="theme_highlight_on" value="true" />
+  <input id="theme_highlight_on" value="false" />
   <input id="theme_code_copy" value="true" />
 </div>
 
@@ -242,7 +240,7 @@
     <li>
         <div class="all active" data-rel="All">All
             
-                <small>(3)</small>
+                <small>(9)</small>
             
         </div>
     </li>
@@ -295,7 +293,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_posts_number" value="9">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -351,6 +349,54 @@
 
     
     <nav id="title-list-nav">
+        
+        <a  class="All "
+           href="/sixofspace/2021/05/20/js-web-api/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="js_web_api">js_web_api</span>
+            <span class="post-date" title="2021-05-20 16:54:31">2021/05/20</span>
+        </a>
+        
+        <a  class="All "
+           href="/sixofspace/2021/05/20/js%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="js基础">js基础</span>
+            <span class="post-date" title="2021-05-20 10:04:48">2021/05/20</span>
+        </a>
+        
+        <a  class="All "
+           href="/sixofspace/2021/05/19/%E7%A7%BB%E5%8A%A8WEB%E5%BC%80%E5%8F%91%E5%B8%83%E5%B1%80%E4%BB%8B%E7%BB%8D/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="移动WEB开发布局介绍">移动WEB开发布局介绍</span>
+            <span class="post-date" title="2021-05-19 15:24:38">2021/05/19</span>
+        </a>
+        
+        <a  class="All "
+           href="/sixofspace/2021/05/19/html5CSS3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="html5CSS3">html5CSS3</span>
+            <span class="post-date" title="2021-05-19 15:01:24">2021/05/19</span>
+        </a>
+        
+        <a  class="All "
+           href="/sixofspace/2021/05/19/html5-css%E6%8F%90%E9%AB%98/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="html5+css提高">html5+css提高</span>
+            <span class="post-date" title="2021-05-19 14:46:39">2021/05/19</span>
+        </a>
+        
+        <a  class="All "
+           href="/sixofspace/2021/05/19/css%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="css基础">css基础</span>
+            <span class="post-date" title="2021-05-19 10:22:37">2021/05/19</span>
+        </a>
         
         <a  class="All "
            href="/sixofspace/2021/05/19/hello-world/"
@@ -424,6 +470,17 @@
         </span>
         
         
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
     </div>
     
     <div class="toc-ref">
@@ -456,6 +513,27 @@
 </p>
 
 
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/sixofspace/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'e27200d7c451999c2c39',
+            clientSecret: 'ed5bb487dfeefcf6706378fe1acebbcdda58b207',
+            repo: 'github.com/sixofspace/sixofspace',
+            owner: 'sixofspace',
+            admin: ['sixofspace'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
 
 
 
@@ -499,140 +577,164 @@
 
 
 </body>
-<script src="/sixofspace/js/jquery.pjax.js?v=1.1.0" ></script>
+<script src="/sixofspace/js/jquery.pjax.js?v=1.1.0"></script>
 
-<script src="/sixofspace/js/script.js?v=1.1.0" ></script>
-<script>
-    var img_resize = 'default';
-    function initArticle() {
-        /*渲染对应的表格样式*/
-        
-            $("#post .pjax table").addClass("green_title");
-        
+        <script src="/sixofspace/js/script.js?v=1.1.0"></script>
+        <script>
+            var img_resize = 'default';
 
-        /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            function initArticle() {
+                /*渲染对应的表格样式*/
+                
+                $("#post .pjax table").addClass("green_title");
+                
+
+                /*渲染打赏样式*/
+                
+                $("input[name=pay]").on("click", function() {
+                    if ($("input[name=pay]:checked").val() == "weixin") {
+                        $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+                    } else {
+                        $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+                    }
+                })
+                
+
+                /*高亮代码块行号*/
+                
+
+                /*访问数量*/
+                
+                $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+                
+
+                /*代码高亮，行号对齐*/
+                $('.pre-numbering').css('line-height', $('.has-numbering').css('line-height'));
+
+                
+                
             }
-        })
+
+            /*打赏页面隐藏与展示*/
+            
+
+            function dashangToggle() {
+                $(".shang_box").fadeToggle();
+                $(".hide_box").fadeToggle();
+            }
+            
+        </script>
+
+        <!--加入行号的高亮代码块样式-->
         
+                <!--自定义样式设置-->
+                <style>
+                    .nav {
+                                width: 542px;
+                            }
+                            .nav.fullscreen {
+                                margin-left: -542px;
+                            }
+                            .nav-left {
+                                width: 120px;
+                            }
+                            @media screen and (max-width: 1468px) {
+                                .nav {
+                                    width: 492px;
+                                }
+                                .nav.fullscreen {
+                                    margin-left: -492px;
+                                }
+                                .nav-left {
+                                    width: 100px;
+                                }
+                            }
+                            @media screen and (max-width: 1024px) {
+                                .nav {
+                                    width: 492px;
+                                    margin-left: -492px
+                                }
+                                .nav.fullscreen {
+                                    margin-left: 0;
+                                }
+                            }
+                            @media screen and (max-width: 426px) {
+                            .nav {
+                                width: 100%;
+                            }
+                            .nav-left {
+                                width: 100%;
+                            }
+                        }
+                        .nav-right .title-list nav a .post-title,
+                        .nav-right .title-list #local-search-result a .post-title {
+                            color: #383636;
+                        }
+                        .nav-right .title-list nav a .post-date,
+                        .nav-right .title-list #local-search-result a .post-date {
+                            color: #5e5e5f;
+                        }
+                        .nav-right nav a.hover,
+                        #local-search-result a.hover {
+                            background-color: #e2e0e0;
+                        }
+                        
+                    /*列表样式*/
+                    
+                    
+                    /* 背景图样式 */
+                    
+                    
+                    /*引用块样式*/
+                    
+                    
+                    /*文章列表背景图*/
+                    
+                    
+                </style>
 
-        /*高亮代码块行号*/
-        
+                
 
-        /*访问数量*/
-        
-        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
-        
-
-        /*代码高亮，行号对齐*/
-        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
-
-        
-        
-    }
-
-    /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
-    
-
-</script>
-
-<!--加入行号的高亮代码块样式-->
-
-<!--自定义样式设置-->
-<style>
-    
-    
-    .nav {
-        width: 542px;
-    }
-    .nav.fullscreen {
-        margin-left: -542px;
-    }
-    .nav-left {
-        width: 120px;
-    }
-    
-    
-    @media screen and (max-width: 1468px) {
-        .nav {
-            width: 492px;
-        }
-        .nav.fullscreen {
-            margin-left: -492px;
-        }
-        .nav-left {
-            width: 100px;
-        }
-    }
-    
-    
-    @media screen and (max-width: 1024px) {
-        .nav {
-            width: 492px;
-            margin-left: -492px
-        }
-        .nav.fullscreen {
-            margin-left: 0;
-        }
-    }
-    
-    @media screen and (max-width: 426px) {
-        .nav {
-            width: 100%;
-        }
-        .nav-left {
-            width: 100%;
-        }
-    }
-    
-    
-    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
-        color: #383636;
-    }
-    
-    
-    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
-        color: #5e5e5f;
-    }
-    
-    
-    .nav-right nav a.hover, #local-search-result a.hover{
-        background-color: #e2e0e0;
-    }
-    
-    
-
-    /*列表样式*/
-    
-
-    /* 背景图样式 */
-    
-    
+                        
+                            
+                                
 
 
-    /*引用块样式*/
-    
+                                        <div id="musicMouseDrag" style="position:fixed; z-index: 9999; bottom: 0; right: 0;">
+                                            <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+                                            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1475596788&auto=1&height=66"></iframe>
+                                        </div>
 
-    /*文章列表背景图*/
-    
-
-    
-</style>
-
-
-
-
-
-
-
+                                        <script>
+                                            var $DOC = $(document)
+                                            $('#musicMouseDrag').on('mousedown', function(e) {
+                                                // 阻止文本选中
+                                                $DOC.bind("selectstart", function() {
+                                                    return false;
+                                                });
+                                                $('#musicDragArea').css('height', '100%');
+                                                var $moveTarget = $('#musicMouseDrag');
+                                                $moveTarget.css('border', '1px dashed grey')
+                                                var div_x = e.pageX - $moveTarget.offset().left;
+                                                var div_y = e.pageY - $moveTarget.offset().top;
+                                                $DOC.on('mousemove', function(e) {
+                                                    var targetX = e.pageX - div_x;
+                                                    var targetY = e.pageY - div_y;
+                                                    targetX = targetX < 0 ? 0 : (targetX + $moveTarget.outerWidth() >= window.innerWidth) ? window.innerWidth - $moveTarget.outerWidth() : targetX;
+                                                    targetY = targetY < 0 ? 0 : (targetY + $moveTarget.outerHeight() >= window.innerHeight) ? window.innerHeight - $moveTarget.outerHeight() : targetY;
+                                                    $moveTarget.css({
+                                                        'left': targetX + 'px',
+                                                        'top': targetY + 'px',
+                                                        'bottom': 'inherit',
+                                                        'right': 'inherit'
+                                                    })
+                                                }).on('mouseup', function() {
+                                                    $DOC.unbind("selectstart");
+                                                    $DOC.off('mousemove')
+                                                    $DOC.off('mouseup')
+                                                    $moveTarget.css('border', 'none')
+                                                    $('#musicDragArea').css('height', '10px');
+                                                })
+                                            })
+                                        </script>
 </html>

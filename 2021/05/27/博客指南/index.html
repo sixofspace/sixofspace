@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>about | Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="about | Hexo">
+  <title>博客指南 | Hexo</title>
+  <meta name="keywords" content=" blog ">
+  <meta name="description" content="博客指南 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="暂无">
 <meta property="og:type" content="website">
@@ -483,24 +483,39 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-博客指南" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">博客指南</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="工具">工具</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">blog</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2021-05-19 09:50:29'>2021-05-16 11:41</time>
+            Created At : <time class="date" title='Updated At: 2021-05-27 17:40:54'>2021-05-27 16:56</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:2</span>
+        <span>Count:507</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -530,7 +545,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9A%82%E6%97%A0"><span class="toc-text">暂无</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-css%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="toc-text">hexo+Github搭建博客 css文件加载问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E6%A1%86%E6%9E%B6%E4%B8%8B%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages%E6%98%BE%E7%A4%BA%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">Hexo框架下文章插入图片部署到GitHub Pages显示失败解决方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gitalk-%E4%BD%BF%E7%94%A8Github%E7%99%BB%E5%BD%95%E5%90%8E%EF%BC%8C%E6%8F%90%E7%A4%BA403%E9%94%99%E8%AF%AF"><span class="toc-text">gitalk 使用Github登录后，提示403错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%9F%E5%8A%A9docker%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAhexo%E5%8D%9A%E5%AE%A2"><span class="toc-text">借助docker搭建个人hexo博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2markdown%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80%E4%B8%BA%E4%B8%83%E7%89%9B%E5%A4%96%E9%93%BE"><span class="toc-text">批量替换markdown本地图片地址为七牛外链</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -546,7 +561,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="暂无"><a href="#暂无" class="headerlink" title="暂无"></a>暂无</h1>
+        <h2 id="hexo-Github搭建博客-css文件加载问题"><a href="#hexo-Github搭建博客-css文件加载问题" class="headerlink" title="hexo+Github搭建博客 css文件加载问题"></a>hexo+Github搭建博客 css文件加载问题</h2><p>问题：<br>搭建好hexo后，在本地能够正常访问。</p>
+<p>但使用git上传到Github后，发现能够访问页面但是不能加载CSS样式文件和Jquery文件。</p>
+<p>最后的解决办法是：</p>
+<ol>
+<li>修改hexo中 _config.yml 文件：<br>将root:/  修改为 root:/ xxx.guithub.io 。即 在后面加上Github 主页的仓库名</li>
+</ol>
+<p><img src="https://img-blog.csdn.net/20181025133243544?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N0YXJyeWFTa3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<ol start="2">
+<li>然后再重新上传<br>hexo clean</li>
+</ol>
+<p>  hexo g</p>
+<p>  hexo d</p>
+<p>详细：<br>遇到这种能够访问页面但无法加载内容的问题时，首先想到的就是F12，查看问题所在</p>
+<ol>
+<li>F12 ，并刷新页面</li>
+</ol>
+<p>除了前两个请求成功后，以下的请求全报错404。 找到问题就好办了</p>
+<p><img src="https://img-blog.csdn.net/20181025131537808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N0YXJyeWFTa3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<ol start="2">
+<li>请求失败地址与请求成功地址做对比<br>请求失败404 地址如下图：</li>
+</ol>
+<p><img src="https://img-blog.csdn.net/20181025131537808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N0YXJyeWFTa3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p> 第一个请求成功地址如下图：</p>
+<p><img src="https://img-blog.csdn.net/20181025131537808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N0YXJyeWFTa3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>对比发现<br>请求成功地址中的 space.github.io是 github主页仓库名称。</p>
+<p>而请求失败的地址是：<a target="_blank" rel="noopener" href="https://starryskyyj.github.io/css/style.css">https://starryskyyj.github.io/css/style.css</a> ;该地址并没有访问 仓库名。</p>
+<p>测试 将仓库名加入到 请求地址中</p>
+<p><img src="https://img-blog.csdn.net/20181025131537808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N0YXJyeWFTa3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>添加仓库名后 CSS文件能够正常访问。那么问题就出在hexo配置上了。</p>
+<ol start="3">
+<li> 修改hexo 中 _config.yml文件<br>原文件的 root：/  指向的是根目录，在后面添加上 仓库名</li>
+</ol>
+<p>即修改为 root：/space.github.io</p>
+<p><img src="https://img-blog.csdn.net/20181025131537808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1N0YXJyeWFTa3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>保存，重新使用git上传到github。</p>
+<p>最后访问成功。</p>
+<h2 id="Hexo框架下文章插入图片部署到GitHub-Pages显示失败解决方法"><a href="#Hexo框架下文章插入图片部署到GitHub-Pages显示失败解决方法" class="headerlink" title="Hexo框架下文章插入图片部署到GitHub Pages显示失败解决方法"></a>Hexo框架下文章插入图片部署到GitHub Pages显示失败解决方法</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangqingchuan92/article/details/111572372?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242">https://blog.csdn.net/wangqingchuan92/article/details/111572372?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242</a></p>
+<h2 id="gitalk-使用Github登录后，提示403错误"><a href="#gitalk-使用Github登录后，提示403错误" class="headerlink" title="gitalk 使用Github登录后，提示403错误"></a>gitalk 使用Github登录后，提示403错误</h2><p><a href="https://github.com/gitalk/gitalk/issues/428">https://github.com/gitalk/gitalk/issues/428</a></p>
+<p>注意 1.gitalk注意配置  repo: sixofspace 是仓库名，而不是地址</p>
+<p>​         2.gitalk 需手动访问一下这个链接：<a target="_blank" rel="noopener" href="https://cors-anywhere.herokuapp.com/corsdemo%EF%BC%8C%E5%87%BA%E7%8E%B0%EF%BC%9A**You">https://cors-anywhere.herokuapp.com/corsdemo，出现：**You</a> currently have temporary access to the demo server.**</p>
+<h2 id="借助docker搭建个人hexo博客"><a href="#借助docker搭建个人hexo博客" class="headerlink" title="借助docker搭建个人hexo博客"></a>借助docker搭建个人hexo博客</h2><p><a target="_blank" rel="noopener" href="https://linguochi.com/post/916ec1b6.html">https://linguochi.com/post/916ec1b6.html</a></p>
+<h2 id="批量替换markdown本地图片地址为七牛外链"><a href="#批量替换markdown本地图片地址为七牛外链" class="headerlink" title="批量替换markdown本地图片地址为七牛外链"></a>批量替换markdown本地图片地址为七牛外链</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bef35247fe6c">https://www.jianshu.com/p/bef35247fe6c</a></p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 820614752@qq.com </span>
     </div>
